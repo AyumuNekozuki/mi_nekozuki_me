@@ -68,5 +68,14 @@
 			<a href="https://mi.mashiro.site/@AyumuNekozuki" target="_blank" rel="noopener noreferrer">@AyumuNekozuki@mi.mashiro.site</a>
 			<a href="https://mi.mashiro.site/@mashiro" target="_blank" rel="noopener noreferrer">@mashiro@mi.mashiro.site</a>
 		</div>
+
+		<script>
+			navigator.serviceWorker.getRegistrations().then(function (registrations) {
+				for (let registration of registrations) {
+					registration.unregister();
+				}
+				console.log('ServiceWorker unregistered');
+			});
+		</script>
 	</body>
 </html>
